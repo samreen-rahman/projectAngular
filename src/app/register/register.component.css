@@ -1,0 +1,113 @@
+
+.fullPage{
+    position: relative;
+    background-image:  url("/assets/homepageImage.jpg");
+    background-size: cover;
+    margin-left: -16px;
+    margin-right: -18px;
+    margin-top: -10px;
+
+    
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background: #ffffff;
+    opacity: 0.6;
+    max-width: 100%;
+    margin: auto;
+    padding: 3px 10px;
+  
+      
+  }
+  .topnav ul {
+      list-style-type: none;
+  }
+  
+  .topnav ul li a {
+    /*color: #FFF;*/
+    font-weight: bold;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none; /*it will remove hyperling underline*/
+    letter-spacing: 1px;
+    height: 70px;
+  }
+ 
+.container{
+    padding: 16px;
+    margin: auto;
+    max-width: 500px;
+    background-color: #ffffff; 
+    opacity: 0.6;
+    font-weight: bold;
+}
+.main{
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+label{
+    padding: 12px,20px; 
+    margin: 8px;; 
+}
+
+input[type=text],input[type=password],input[type=email],input[type=tel],input[type=number],input[type=date],select{
+    width: 90%;
+    height: 30px;
+    padding: 12px,20px;
+    margin: 8px;
+    /*inline we cannot set width but inline-block we can*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    /*include padding and border in the total width and height*/
+}
+textarea{
+    width: 90%;
+    padding: 12px,20px;
+    margin: 8px;
+    /* display: inline-block; */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#button1 , #button2 {
+    display:inline-block;
+    /*other codes*/
+    }
+button{
+    background-color: darkblue;
+    border-radius:28px;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #1f6ecf;
+    display:inline-block;
+    cursor:pointer;
+}
+
+button:disabled{
+    background-color:darkblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 8px;
+    border: none;
+    cursor: not-allowed;
+    width: 40%;
+} 
+.myButton:hover {
+    background-color:#4178c0;
+    width: 45%;
+    height: auto;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}

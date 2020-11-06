@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <mat-card class="form-width">
+    <h1  mat-dialog-title>Update a Customer</h1>
+    <mat-dialog-content>
+    <form >
+        <mat-form-field><input matInput [(ngModel)]="emp.empName"  type="text" name="user"/></mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <mat-form-field><input matInput placeholder="Enter the number"/></mat-form-field>  <br> 
+         <mat-form-field> <input matInput placeholder="Enter the number"/></mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+         <mat-form-field>  <input matInput placeholder="Enter the number"/></mat-form-field> <br>
+         <mat-form-field>    <input matInput placeholder="Enter the number"/></mat-form-field>
+    </form>    
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button  mat-raised-button (click)="login1()"  color="primary">Save</button>
+ 
+    <button  mat-raised-button (click)="closeMe()">Close</button>
+</mat-dialog-actions>
+</mat-card>
+</body>
+</html>
+

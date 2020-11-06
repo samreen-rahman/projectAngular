@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Signika:400' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <div class="topnav">
+        <ul>
+            <li><h3>Welcome back, {{ customerName }}</h3></li>
+            <li><a [routerLink]="['/dashboardLink']" style="float: right;">Dashboard</a></li>
+            <li><a [routerLink]="['/productList']" style="float: right;">Product</a></li>
+            <li><a [routerLink]="['/homeLink']" style="float: right;">Logout</a></li>
+        </ul>
+    </div>
+    <div id="section3"></div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+
+                <div class="card-holder">
+                    <div class="card">
+                        <span class="title">FinServ</span>
+                        <img class="mc"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MasterCard_logo.png/320px-MasterCard_logo.png">
+                        <span class="holo-back"></span>
+                        <span class="holo"></span>
+                        <br>
+                        <span class="emboss number">5467 5670 7623 0945</span><br><br>
+                        <span class="emboss name">Santhosh K S</span><br><br>
+                        <span class="balance">Balance : 20.Cr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card-back">
+                <div class="card-holder">
+                    <div class="card">
+                        <span class="title">FinServ</span>
+
+                        <span class="emboss number">Plaatinum Card</span><br><br>
+                        <span class="emboss name">Status: ACTIVE</span><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="row">
+        <div class="prod">
+            <a style="color:white;text-decoration: none;" href="#section1">
+                <h2>Products Purchased</h2>
+            </a>
+        </div>&nbsp;
+        <div class="prod">
+            <a style="color:white;text-decoration: none" href="#section2">
+                <h2>Tranasction History</h2>
+            </a>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+    <div class="main" id="section1">
+        <h2>Products purchased</h2>
+
+        <div class="proddet1">
+
+            <h2> Product details will come here</h2>
+        </div>
+        <div class="proddet1">
+
+            <h2> Product details will come here</h2>
+        </div>
+        <div class="proddet1">
+
+            <h2> Product details will come here</h2>
+        </div>
+        <br><br>
+        <a class="bottom" href="#section3">Back to top</a>
+    </div>
+
+    <div class="main" id="section2">
+        <h2>Transaction History</h2>
+
+        <div class="proddet1">
+
+            <h2> Transaction details will come here</h2>
+        </div>
+        <div class="proddet1">
+
+            <h2> Transaction details will come here</h2>
+        </div>
+        <br><br>
+        <a class="bottom" href="#section3">Back to Top</a>
+    </div>
+
+
+
+
+</body>
+
+</html>

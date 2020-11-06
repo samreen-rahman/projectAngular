@@ -1,0 +1,134 @@
+<div class="fullPage">
+    <div class="topnav">
+        <ul>
+            <li><img src="../assets/Finance.jpg"
+                    style="padding-right: 20px; height: 60px; float: left;border-radius: 0px;"></li>
+            <li><a [routerLink]="['/loginLink']" style="float: right;">LOGIN</a></li>
+            <li><a [routerLink]="['/registerLink']" style="float: right;">REGISTER</a></li>
+            <li><a [routerLink]="['/homeLink']" style="float: right;">HOME</a></li>
+
+        </ul>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h1 style="text-align:center;color: rgb(78, 34, 34);"><b>Register Here</b></h1>
+            <form #regForm="ngForm">
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Your Name" #uname="ngModel" required name="name"
+                    [(ngModel)]=customer.customerName>
+                <div *ngIf="uname.invalid && (uname.dirty || uname.touched)">
+                    <div *ngIf="uname.errors.required" style="color: red;">Name is required</div>
+                </div>
+                <br />
+                <label for="DOB"><b>Date Of Birth</b></label>
+                <input type="date" placeholder="Enter Your Date Of Birth" #DOB="ngModel" required name="DOB" [(ngModel)]=customer.dateOfBirth>
+                <div *ngIf="DOB.invalid && (DOB.dirty || DOB.touched)">
+                    <div *ngIf="DOB.errors.required" style="color: red;">Date of birth is required</div>
+                </div>
+                <br />
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email Address" #email="ngModel"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required name="userEmail" [(ngModel)]=customer.email>
+                <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                    <div *ngIf="email.errors.required" style="color: red;">email is required</div>
+                    <div *ngIf="email.errors.pattern" style="color: red;">invalid email</div>
+                </div>
+                <br />
+                <label for="mobile"><b>Mobile No.</b></label>
+                <input type="number" placeholder="Enter Mobile number" #mobile="ngModel" required minlength="10"
+                    pattern="\d{10}" maxlength="10" name="userMobile" [(ngModel)]=customer.phoneNumber>
+                <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)">
+                    <div *ngIf="mobile.errors.required" style="color: red;">Mobile No is required</div>
+                    <div *ngIf="mobile.errors.pattern" style="color: red;">Mobile No is not valid</div>
+                </div>
+                <br />
+                <label for="uname"><b>UserName</b></label>
+                <input type="text" placeholder="Enter Username" #username="ngModel" name="username" required [(ngModel)]=customer.userName>
+                <div *ngIf="username.invalid && (username.dirty || username.touched)">
+                    <div *ngIf="username.errors.required" style="color: red;">userName is required</div>
+                </div>
+                <br />
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter password" #password="ngModel"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required name="userPassword" [(ngModel)]=customer.password>
+                <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <div *ngIf="password.errors.required" style="color: red;">password is required</div>
+                    <div *ngIf="password.errors.pattern" style="color: red;">invalid password</div>
+                </div>
+                <br />
+                <label for="Conpsw"><b>Confirm Password</b></label>
+                <input type="password" ngValidateEqual="passwordFieldName" #confPassword="ngModel"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required placeholder="Confirm Password"
+                    name="userConfPassword" ngModel>
+                <div *ngIf="confPassword.invalid && (confPassword.dirty || confPassword.touched)">
+                    <div *ngIf="confPassword.errors.required" style="color: red;">password is required</div>
+                    <div *ngIf="[pass]" style="color: red;">
+                        Passwords Don't Match
+                    </div>
+                </div>
+                <br />
+                <label for="address"><b>Address</b></label><br />
+                <textarea rows="3" cols="50" placeholder="Enter Your Address" #address="ngModel" required
+                    name="useraddress" [(ngModel)]=customer.address>Address</textarea>
+                <div *ngIf="address.invalid && (address.dirty || address.touched)">
+                    <div *ngIf="address.errors.required" style="color: red;">Address is required</div>
+                </div>
+                <br /><br />
+                <label id="card"><b>Card Type</b></label>
+                &nbsp; &nbsp; &nbsp;
+                <input id="Gold" type="radio" value="Gold" name="card" (click)=isGold(true) checked [(ngModel)]=customer.cardType>
+                <label for="Gold"><b>Gold</b></label>&nbsp;
+                <input id="Titanium" type="radio" value="Titanium" name="card" (click)=isGold(false) [(ngModel)]=customer.cardType>
+                <label for="Titanium"><b>Titanium</b></label>
+                <div *ngIf="boolval">
+                    Max Limit=Rs.60000<br /> Processing Fee=Rs. 300
+                </div>
+                <div *ngIf="!boolval">
+                    Max Limit=Rs.100000<br /> Processing Fee=Rs. 500
+                </div>
+                <br />
+                <label for="pancard"><b>PanCard</b></label>
+                <input type="text" placeholder="Enter Your pancard" #pcard="ngModel" required name="pancard" [(ngModel)]=customer.panCard>
+                <div *ngIf="pcard.invalid && (pcard.dirty || pcard.touched)">
+                    <div *ngIf="pcard.errors.required" style="color: red;">Pancard is required</div>
+                </div>
+
+                <br /><br />
+                <label for="Bank"><b>Select Your Bank:</b></label>
+                <select name="Bank" id="bank"  [(ngModel)]='customer.selectBank'>
+                    <option value="none" selected disabled hidden>select your Bank</option>
+                    <option value="Allahabad">Allahabad Bank</option>
+                    <option value="Axis">Axis Bank</option>
+                    <option value="BOI">Bank of India</option>
+                    <option value="ICICI">ICICI Bank</option>
+                    <option value="Kotak">Kotak Bank</option>
+                    <option value="PNB">Punjab National Bank</option>
+                    <option value="SBI">State Bank of India</option>
+                    <option value="UCO">UCO Bank</option>
+                    <option value="HDFC">HDFC Bank</option>
+                </select>
+                <br />
+                <br />
+                <label for="account"><b>Account No.</b></label>
+                <input type="number" placeholder="Enter Your Account number" #accno="ngModel" required minlength="12"
+                    name="accountno" [(ngModel)]=customer.accountNo>
+                <div *ngIf="accno.invalid && (accno.dirty || accno.touched)">
+                    <div *ngIf="accno.errors.required" style="color: red;">Account No is required</div>
+                </div>
+                <br />
+                <label for="ifsc"><b>Ifsc Code</b></label>
+                <input type="text" placeholder="Enter Your Ifsc Code" #ifsc="ngModel" required name="ifsccode" [(ngModel)]=customer.ifscCode>
+                <div *ngIf="ifsc.invalid && (ifsc.dirty || ifsc.touched)">
+                    <div *ngIf="ifsc.errors.required" style="color: red;">Ifsc Code is required</div>
+                </div>
+                <br />
+                <button type="submit" class="myButton" [disabled]="!regForm.valid?true:false" (click)='register()'>Register</button>
+                <button type="reset" class="myButton" value="Reset">Reset</button>
+
+                <div style="text-align: center;">
+                    Already an User ,<a [routerLink]="['/loginLink']">Login Here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

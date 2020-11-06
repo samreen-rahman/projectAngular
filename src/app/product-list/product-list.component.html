@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="topnav">
+    <ul>
+        <li><a [routerLink]="['/dashboardLink']" style="float: right;">Dashboard</a></li>
+        <li><a [routerLink]="['/productList']" style="float: right;">Product</a></li>
+        <li><a [routerLink]="['/homeLink']" style="float: right;">Logout</a></li>
+    </ul>
+</div>
+  <div class ="main">
+  <div class="grid">
+  <div  *ngFor="let product of products">
+    <button routerLink="/productdetail" class="prod">
+    <img class ="image"src="{{product.image}}" alt="" width="280" height="280">
+    <h3 class="title">{{product.title}}</h3>
+   <p class="price">&#8377;{{product.price}}</p>
+   <button class="cart">Add To Cart</button>
+  </button>
+  </div>
+</div>
+</div>
+
+
+    
+  
+</body>
+</html>
+
+

@@ -1,0 +1,67 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    max-width: 300px;
+    font-family: arial;
+}
+.main{
+    width:fixed;
+    margin-left: 45px;
+}
+.prod{
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 290px;
+    box-sizing: content-box;
+    text-align: center;
+    font-family: arial;
+        outline: none;
+          border: none;
+         border-radius: 10px;
+          background-color: white;
+          text-align: center;
+          cursor: pointer;
+          font-size: 18px;
+        border-color:white;
+    margin: 6px;}
+       
+        .prod:hover {
+        
+          transform: scale(1.035);
+         background-color: #F0FFFF;}
+         .price{
+            color: grey;
+            font-size: 22px;
+         }
+         .title:hover{
+             color:red; ;
+         }
+         .cart{
+            outline: none;
+            border: none;
+            background-color: white;
+            padding: 3px;
+         }
+         .topnav {
+            overflow: hidden;
+            background: #ffffff;
+            opacity: 0.6;
+            max-width: 100%;
+            margin: auto;
+            padding: 3px 10px;
+          
+              
+          }
+          .topnav ul {
+              list-style-type: none;
+          }
+          
+          .topnav ul li a {
+            /*color: #FFF;*/
+            font-weight: bold;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none; /*it will remove hyperling underline*/
+            letter-spacing: 1px;
+            height: 70px;
+          }

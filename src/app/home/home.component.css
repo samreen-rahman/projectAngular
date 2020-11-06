@@ -1,0 +1,105 @@
+@keyframes slide{
+  0%{
+    left:0px;
+    top: 100px;
+    
+  }
+  50%{
+    left: 20px;
+    top: 150px;
+    
+  }
+  100%{
+    left: 40px;
+    top: 200px;
+  }
+} 
+.hero-content {
+  position: absolute;
+  background-color: #ffffff; 
+  opacity: 0.6; 
+  padding: 30px;
+  animation: slide 1s linear;
+  left: 40px;
+  top: 200px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.hero{
+  height: 500px; 
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  0% {
+    /* left: 60%; */
+    opacity: 0.1;
+  }
+  50%{
+    opacity: 0.4;
+  }
+}
+
+/* Section */
+.section {
+  padding-top: 30px;
+}
+.section-title {
+  text-align: center;
+}
+/*  Flex */
+.flex-container {
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+  /* font-size: large; */
+  font-weight: bold;
+}
+.flex-item {
+  padding: 40px;
+  background-color: #ffffff; 
+  opacity: 0.7;
+}
+.flex-item .section-icon {
+  width: 120px;
+}
+.flex-item:hover{
+  font-size: 120%;
+  line-height: 120%;
+}
+
+
+.fullPage{
+  position: relative;
+  background-image:  url("/assets/homepageImage.jpg");
+  background-size: cover;
+  margin-left: -15px;
+  margin-right: -22px;
+  margin-top: -10px;
+  
+}
+
+.topnav {
+  overflow: hidden;
+  background: #ffffff;
+  opacity: 0.6;
+  max-width: 100%;
+  margin: auto;
+  padding: 3px 10px;
+
+    
+}
+.topnav ul {
+    list-style-type: none;
+}
+
+.topnav ul li a {
+  /*color: #FFF;*/
+  font-weight: bold;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none; /*it will remove hyperling underline*/
+  letter-spacing: 1px;
+  height: 70px;
+}

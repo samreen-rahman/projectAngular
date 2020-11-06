@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="main">
+            <div class="card1">
+                <a [routerLink]="['/homeLink']" style="color:#bd505a;;">
+                    <h3 style="font-size: 1.4rem;">Logout</h3>
+                </a>
+            </div>
+            <div class="card">
+                <h1 style="font-size: 2.3rem;">Admin Panel</h1>
+            </div>
+
+            <div class="card">
+                <table style="border:5px solid" border=1>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>UserName</th>
+                        <th>Password</th>
+                        <th>Email</th>
+                        <th>MobileNumber</th>
+                        <th> EDIT</th>
+                        <th> DELETE</th>
+                        <th>Accept/Reject</th>
+                    </tr>
+                    <tr *ngFor='let emp of employees'>
+                        <!--for displaying only emp who have sal >4000-->
+
+                        <td>{{emp.empId}}</td>
+                        <td>{{emp.empName}}</td>
+                        <td>{{emp.empUserName}}</td>
+                        <td>{{emp.empPassword}}</td>
+                        <td>{{emp.empemail}}</td>
+                        <td>{{emp.empMobileNo}}</td>
+                        <td>
+                            <mat-card style="background:inherit;padding: 0;">
+                                <mat-card-action><button class="btn info" (click)="edit()">{{emp.empEdit}}</button>
+                                </mat-card-action>
+                            </mat-card>
+                        </td>
+                        <td>
+                            <mat-card style="background:inherit;padding: 0;">
+                                <mat-card-action><button class="btn danger"
+                                        (click)="onDelete()">{{emp.empDelete}}</button></mat-card-action>
+                            </mat-card>
+                        </td>
+                        <td>
+                            <mat-card style="background:inherit;padding: 0;">
+                                <mat-card-action><button class="btn info" (click)="onAccept()"> View</button>
+                                </mat-card-action>
+                            </mat-card>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

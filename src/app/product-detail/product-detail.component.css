@@ -1,0 +1,26 @@
+button {
+    margin:auto;
+    display:block;
+  }
+  .custom-select
+  {
+   margin:auto;
+    display:block;
+  }
+  .price{
+    color: grey;
+    font-size: 22px;
+    position: relative;
+    left:95px
+  }
+  .describe{
+    display: grid;
+    grid-template-columns: 1fr   ; 
+    width: 600px;
+    padding-left: 100px;
+    
+    
+  }
+  .fullPage{
+    height: 500px;
+  }

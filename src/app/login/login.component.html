@@ -1,0 +1,53 @@
+<div class="fullPage">
+    <div class="topnav">
+        <ul>
+            <li><img src="../assets/Finance.jpg"
+                    style="padding-right: 20px; height: 60px; float: left;border-radius: 0px;"></li>
+            <li><a [routerLink]="['/loginLink']" style="float: right;">LOGIN</a></li>
+            <li><a [routerLink]="['/registerLink']" style="float: right;">REGISTER</a></li>
+            <li><a [routerLink]="['/homeLink']" style="float: right;">HOME</a></li>
+
+        </ul>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2 style="text-align: center;color: rgb(78, 34, 34);"><strong>Login to a world of Opportunities</strong>
+            </h2>
+            <!-- <form #form="ngForm" (ngSubmit)="checkLogin()"> -->
+            <form #loginForm="ngForm">
+                <div class="con">
+                    <!-- {{loginForm.value|json}} -->
+                    <label for="uname"><b>Email</b></label>
+                    <input type="email" #email="ngModel" required name="userEmail" [(ngModel)]="login.email"><br />
+                    <div *ngIf="email.invalid &&(email.dirty||email.touched)">
+                        <div *ngIf="email.errors.required" style="color: red;">Email is required</div>
+                    </div>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" #password="ngModel" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        name="psw" [(ngModel)]="login.password"><br />
+                    <div *ngIf="password.invalid &&(password.dirty||password.touched)">
+                        <div *ngIf="password.errors.required" style="color: red;">Password is required</div>
+                        <div *ngIf="password.errors.pattern" style="color: red;">Invalid Password</div>
+                    </div>
+
+
+                    <button type="submit" [disabled]="!loginForm.valid?true:false" (click)='loginUser()'>Login</button>
+                    <button type="submit" [disabled]="!loginForm.valid?true:false" (click)="adminLogin()">Admin
+                        Login</button>
+                    <br />
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember">Remember Me
+                    </label>
+
+                </div>
+
+                <div class="con" style="background-color: #f1f1f1;">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <span class="psw"> <a [routerLink]="['/forgetLink']">Forgot Password</a></span>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+
+html{
+    height:100%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px;
+    background-image: url("/assets/b.jpg");
+    margin-left: -16px;
+    margin-right: -16px;
+    height: 735px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    }
+   
+    .main{
+        max-width:80%;
+        margin:auto;
+    }
+    .card{
+        background-color: unset;
+        color:#bac9d7;
+        padding:20px;
+        overflow: hidden;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .card1{
+         overflow: hidden;
+        margin-top: 50px;
+        float:right;
+        margin-right: -50px;
+        
+    }
+    .btn {
+        border: none;
+        background-color: inherit;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+      }
+      
+      .btn:hover {background:#293949;}
+      
+      .info {color: dodgerblue;}
+      .danger {color:red;}
+
